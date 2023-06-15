@@ -1,0 +1,51 @@
+def operation(x,y,z):
+      print((x*y)*z)         #1
+operation(2,3,6)  
+
+
+ x = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+ for j in range(len(x)-1):
+   for i in range (len(x)-1):                             #2
+    if x[i][-1] > x[i+1][-1]:
+      x[i] , x[i+1] = x[i+1] , x[i]
+    print(x)
+    
+    
+    
+ d1 = {'a': 100, 'b': 200, 'c':300}
+
+d2 = {'a': 300, 'b': 200, 'd':400}
+
+d3 =dict(d1) 
+
+d3.update(d2) 
+
+for i,j in d1.items():                        #3
+
+  for k,h in d2.items():  
+
+    if i == k: 
+
+      d3[i] = j+h   
+      
+      
+
+
+
+n=int(input())
+d=dict()
+for i in range(1,n+1):
+    d[i]=i*i                             #4
+
+print(d)
+
+
+
+
+
+x = [('item1', '12.20'), ('item2', '15.10'), ('item3', '24.5')] 
+for j in range(len(x)-1):
+  for i in range(len(x)-1):
+    if float(x[i][-1]) >  float(x[i+1][-1]):                           #5
+        x[i] , x[i+1] = x[i+1] , x[i] 
+  print (x)
