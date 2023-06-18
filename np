@@ -1,0 +1,38 @@
+import numpy as np
+
+stu = int(input("enter number of students"))
+sub = int(input("enter number of subjects"))
+
+#total marks 
+temp = []
+total =[]
+for i in range(1,stu+1):
+    print("enter info for student:",i)
+    for j in range(1,sub+1):
+      print("enter greades for subject :",j)
+      x = int(input())
+      temp.append(x)
+    total.append(sum(temp))
+    temp = [] 
+    #percentage 
+perc = []
+for i in total:  #180,210
+    perc.append((i/(sub*100))*100)
+#grades
+grad = []
+for i in perc:
+    if i >= 90:
+      grad.append("A+")
+    elif i >= 80:
+      grad.append("A")
+    elif i >= 70:
+      grad.append("B+")
+    elif i >= 60:
+      grad.append("B")
+    elif i >= 50:
+      grad.append("C")
+    else:
+      grade.append("F")
+arr = np.array([total,perc,grad])
+
+print(arr)
