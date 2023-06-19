@@ -1,0 +1,17 @@
+!pip install requests_html
+from requests_html import HTMLSession
+from bs4 import BeautifulSoup
+
+ht = HTMLSession()
+
+url = "https://en.wikipedia.org/wiki/Egypt" # my link
+
+def data(x):
+
+  gt = ht.get(x)
+  soup = BeautifulSoup(gt.text,'html.parser')
+  return soup
+
+soup = data(url)
+
+print(soup)
