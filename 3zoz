@@ -15,3 +15,70 @@ def data(x):
 soup = data(url)
 
 print(soup)
+
+
+
+
+
+def title(soup):
+  title = soup.select_one("<span class="mw-page-title-main">Egypt</span>")
+  return titles.get_text()
+  print(title(soup))
+
+
+
+def paragraphs():
+
+  for head in soup.find_all("p"):
+
+    print(head.get_text())
+
+paragraphs()
+
+
+
+def links():
+  links = {}
+  for link in soup.find_all("a"):
+
+    url = link.get("herf","")
+
+    if "/wiki/" in url:
+
+      links[link.text.strip()] = url 
+
+  print(links,"\n")
+
+  link()
+
+
+
+
+def scraper(wiki):
+  def data(url1):
+    gt = ht.get(url1)
+    soup = BeautifulSoup(gt.text,'html.parser')
+    return soup
+
+  soup = data(wiki)
+  def title():
+    titles = soup.find("title")
+    print(titles,"\n")
+
+  def paragraphs():
+      for head in soup.find_all("p"):
+        print(head.get_text(),"\n")
+
+  def links():
+    links ={}
+    for link in soup.find_all("a"):
+      url = link.get("href","")
+      if "/wiki/" in url:
+        links[link.text.strip()] = url
+        print(links,"\n")
+
+
+
+print(title(),paragraphs(),links())
+
+scraper("https://en.wikipedia.org/wiki/Egypt")
