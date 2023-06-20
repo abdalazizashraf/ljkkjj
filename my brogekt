@@ -1,0 +1,19 @@
+
+import random
+
+options = ["rock", "paper", "scissors"]
+result = ""
+
+while result == "":
+    user = input("Enter rock, paper, or scissors: ").lower()
+    if user not in options:
+        print("Invalid input, try again.")
+        continue
+    computer = random.choice(options)
+    if user == computer:
+        result = "Tie"
+    elif (user == "rock" and computer == "scissors") or (user == "paper" and computer == "rock") or (user == "scissors" and computer == "paper"):
+        result = "You Win!"
+    else:
+        result = "Computer Wins!"
+    print(f"You chose {user}, computer chose {computer}. {result}\n")
