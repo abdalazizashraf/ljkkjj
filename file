@@ -1,0 +1,38 @@
+inputfile = "C:\Users\CoMpU MaGiC\Desktop\python.txt"
+N = int(input("entr N value: "))
+
+with open(inputfile, 'r') as filedata
+linelist = filedata.readlines()
+
+print("the follwing are the first")       
+for textline in (lineslist[ :N]):
+
+  print(textline.end = '')
+
+filedata.close
+
+
+
+inputfile = "C:\Users\CoMpU MaGiC\Desktop\python.txt"
+N = int(input("entr N value: "))
+
+with open(inputfile, 'r') as filedata
+linelist = filedata.readlines()
+
+print("the follwing are the first")             
+for textline in (lineslist[ N: ]):
+  
+  print(textline.end = '')
+
+filedata.close
+
+
+
+f=open("C:\Users\CoMpU MaGiC\Desktop\python.txt")
+t= f.read()
+
+r =t.split()                               
+
+print("C:\Users\CoMpU MaGiC\Desktop\python.txt:", r)
+close
+
